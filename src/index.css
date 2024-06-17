@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.app-header {
+  text-align: center;
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.browser {
+  margin: 30px 30px 30px 40%;
+}
+
+.folder {
+  cursor: pointer;
+}
+
+.file {
+  margin-left: 20px;
+}
+
+.mime-type {
+  color: grey;
+}
