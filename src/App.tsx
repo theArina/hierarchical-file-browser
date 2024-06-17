@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Folder from './Folder';
 import data from '../Data.json';
 import { Node } from './interfaces';

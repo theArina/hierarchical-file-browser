@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { FileProps } from './interfaces';
 
 class File extends Component<FileProps> {
