@@ -7,7 +7,7 @@ export interface Node {
 
 export interface FolderProps {
   name: string;
-  children: Node[];
+  children?: Node[];
   path: string;
   level: number;
 }
@@ -18,5 +18,5 @@ export interface FolderState {
 
 export interface FileProps {
   name: string;
-  mime: string;
+  mime?: string;
 }

@@ -3,6 +3,8 @@ import Folder from './Folder';
 import data from '../Data.json';
 import { Node } from './interfaces';
 
+const typedData: Node[] = data as Node[];
+
 class App extends Component {
   render() {
     return (
@@ -11,7 +13,7 @@ class App extends Component {
           <h1>File Browser</h1>
         </header>
         <div className="browser">
-          {data.map((node: Node, index: number) => (
+          {typedData.map((node: Node, index: number) => (
             <Folder
               key={index}
               name={node.name}

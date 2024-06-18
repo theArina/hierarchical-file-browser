@@ -22,23 +22,21 @@ class Folder extends Component<FolderProps, FolderState> {
         <div className="folder" onClick={this.toggleCollapse}>
           {expanded ? '▼' : '▶'} {name}
         </div>
-        {expanded && (
-          <div>
-            {children.map((child, index) =>
-              child.type === 'FOLDER' ? (
-                <Folder
-                  key={index}
-                  name={child.name}
-                  children={child.children || []}
-                  path={`${path}/${child.name}`}
-                  level={level + 1}
-                />
-              ) : (
-                <File key={index} name={child.name} mime={child.mime || ''}/>
-              )
-            )}
-          </div>
-        )}
+        {expanded &&
+          children?.map((child, index) =>
+            child.type === 'FOLDER' ? (
+              <Folder
+                key={index}
+                name={child.name}
+                children={child.children || []}
+                path={`${path}/${child.name}`}
+                level={level + 1}
+              />
+            ) : (
+              <File key={index} name={child.name} mime={child.mime || ''}/>
+            )
+          )
+        }
       </div>
     );
   }
